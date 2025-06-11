@@ -1,0 +1,12 @@
+<div class="project-card">
+    <img [src]="imageUrl()" alt="Project 1" class="project-img">
+    <div class="project-content">
+        <h3 class="project-title">{{ name() }}</h3>
+        <p class="project-description">
+            {{ description() }}
+        </p>
+        <div class="project-links">
+            <a [href]="link()" class="project-link">View Project</a>
+        </div>
+    </div>
+</div>
