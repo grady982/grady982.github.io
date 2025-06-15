@@ -1,5 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { MatDialog } from '@angular/material/dialog';
+import { DataLineageComponent } from './data-lineage/data-lineage.component';
+
+interface Project {
+  name: string;
+  description: string;
+  imageUrl: string;
+  link: string;
+}
 
 @Component({
   selector: 'app-feature-projects',
@@ -9,7 +18,7 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 })
 export class FeatureProjectsComponent {
 
-  projects = [
+  projects: Project[] = [
     {
       name: 'Blog',
       description: `
@@ -23,7 +32,34 @@ export class FeatureProjectsComponent {
     // TODO: Node-code Canvas
     // TODO: EDM Editor
     // TODO: Data Lineage
+    {
+      name: 'Data Lineage',
+      description: `
+        This project visualizes data lineage using a family tree structure. 
+        It employs D3.js for rendering and FamilyTree.js for managing relationships, 
+        allowing users to explore data connections interactively.
+      `,
+      imageUrl: '/assets/images/data-lineage.png',
+      link: '/projects/data-lineage'
+    },
     // TODO: Embedded Tableau Report
     // TODO: SQL Flow
   ];
+
+  dialog = inject(MatDialog);
+
+  onViewProject(e: Project) {
+    switch (e.name) {
+      case 'Blog':
+        window.open(e.link, '_blank');
+        break;
+      case 'Data Lineage':
+        this.dialog.open(DataLineageComponent, {
+          width: '1000px',
+          minWidth: '1000px',
+        });
+        break;
+
+    }
+  }
 }

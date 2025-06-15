@@ -33,9 +33,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/libs/familytree/familytree.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/libs/familytree/d3.v7.min.js",
+              "src/assets/libs/familytree/d3-dag.js",
+              "src/assets/libs/familytree/familytree.js"
+            ]
           },
           "configurations": {
             "production": {

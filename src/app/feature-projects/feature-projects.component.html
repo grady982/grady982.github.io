@@ -4,9 +4,10 @@
     <div class="projects" >
       @for(project of projects; track project.name) {
         <app-project-card [name]="project.name"
-                          [description]="project.description"
-                          [imageUrl]="project.imageUrl"
-                          [link]="project.link">
+          [description]="project.description"
+          [imageUrl]="project.imageUrl"
+          [link]="project.link"
+          (onView)="onViewProject(project)">
         </app-project-card>
       }
     </div>

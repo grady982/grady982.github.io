@@ -1,4 +1,19 @@
-:root {
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}:root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
     --secondary: #f97316;
@@ -322,6 +337,7 @@ section {
 .project-links {
     display: flex;
     gap: 1rem;
+    cursor: pointer;
 }
 
 .project-link {
@@ -459,3 +475,5 @@ footer {
 }
 
 /* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

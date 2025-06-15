@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',
@@ -12,5 +12,11 @@ export class ProjectCardComponent {
   description = input.required<string>();
   imageUrl = input.required<string>();
   link = input.required<string>();
+
+  onView = output<void>();
+
+  onClick() {
+    this.onView.emit();
+  }
 
 }
