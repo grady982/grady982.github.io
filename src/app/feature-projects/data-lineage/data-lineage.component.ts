@@ -19,7 +19,7 @@ export class DataLineageComponent implements AfterViewInit {
     const svg = d3
       .select('#svgContainer')
       .append('svg')
-      .attr('width', '800')
+      .attr('width', '1000')
       .attr('height', '400');
 
     // make family tree object

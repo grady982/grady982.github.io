@@ -30,8 +30,13 @@ export class FeatureProjectsComponent {
       link: 'https://grady-blog.web.app/'
     },
     // TODO: Node-code Canvas
+    {
+      name: 'No-code',
+      description: `Simple flow library. `,
+      imageUrl: '/assets/images/node-code-canvas.png',
+      link: '/projects/node-code-canvas'
+    },
     // TODO: EDM Editor
-    // TODO: Data Lineage
     {
       name: 'Data Lineage',
       description: `
@@ -55,8 +60,8 @@ export class FeatureProjectsComponent {
         break;
       case 'Data Lineage':
         this.dialog.open(DataLineageComponent, {
-          width: '1000px',
-          minWidth: '1000px',
+          width: '1200px',
+          minWidth: '1200px',
         });
         break;
 
