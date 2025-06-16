@@ -1,4 +1,4 @@
-export const MockData = {
+export const MockData: any = {
     "start": "benjenstark1",
     "persons": {
         "benjenstark1": { "id": "benjenstark1", "name": "Benjen Stark", "birthyear": 84, "deathyear": "101-121", "own_unions": ["uBenjenLysa"] },

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { MatDialog } from '@angular/material/dialog';
 import { DataLineageComponent } from './data-lineage/data-lineage.component';
+import { NoCodeCanvasComponent } from './no-code-canvas/no-code-canvas.component';
 
 interface Project {
   name: string;
@@ -64,7 +65,13 @@ export class FeatureProjectsComponent {
           minWidth: '1200px',
         });
         break;
-
+      case 'No-code':
+        this.dialog.open(NoCodeCanvasComponent, {
+          width: '1200px',
+          minWidth: '1200px',
+          height: '800px',
+        });
+        break;
     }
   }
 }

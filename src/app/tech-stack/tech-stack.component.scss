@@ -1,0 +1,22 @@
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.skill-tag {
+    background-color: var(--light);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skill-tag:hover {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
