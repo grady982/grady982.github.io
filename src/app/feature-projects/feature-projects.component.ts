@@ -30,11 +30,16 @@ export class FeatureProjectsComponent {
       imageUrl: '/assets/images/blog.png',
       link: 'https://grady-blog.web.app/'
     },
-    // TODO: Node-code Canvas
     {
-      name: 'No-code',
-      description: `Simple flow library. `,
-      imageUrl: '/assets/images/node-code-canvas.png',
+      name: 'No-code Canvas',
+      description: `
+        It allows users to create and manage flowcharts visually, 
+        supporting drag-and-drop functionality, node creation, and connection management. 
+        The project is built with Angular and uses Drawflow for the canvas interface. 
+        It aims to provide a user-friendly experience for designing workflows without coding.
+        The project is still in development, with plans to add more features like node customization and data export.
+      `,
+      imageUrl: '/assets/images/no-code-canvas.png',
       link: '/projects/node-code-canvas'
     },
     // TODO: EDM Editor
@@ -65,7 +70,7 @@ export class FeatureProjectsComponent {
           minWidth: '1200px',
         });
         break;
-      case 'No-code':
+      case 'No-code Canvas':
         this.dialog.open(NoCodeCanvasComponent, {
           width: '1200px',
           minWidth: '1200px',
