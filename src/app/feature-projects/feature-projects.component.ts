@@ -1,15 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { ProjectCardComponent } from './project-card/project-card.component';
+import { Project, ProjectCardComponent } from './project-card/project-card.component';
 import { MatDialog } from '@angular/material/dialog';
 import { DataLineageComponent } from './data-lineage/data-lineage.component';
 import { NoCodeCanvasComponent } from './no-code-canvas/no-code-canvas.component';
-
-interface Project {
-  name: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-}
+import { EdmEditorComponent } from './edm-editor/edm-editor.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feature-projects',
@@ -18,6 +13,8 @@ interface Project {
   styleUrl: './feature-projects.component.scss'
 })
 export class FeatureProjectsComponent {
+
+  router = inject(Router);
 
   projects: Project[] = [
     {
@@ -28,7 +25,8 @@ export class FeatureProjectsComponent {
         Without a traditional backend, it uses Firebase Realtime Database to store content and is fully hosted on Firebase.
       `,
       imageUrl: '/assets/images/blog.png',
-      link: 'https://grady-blog.web.app/'
+      link: 'https://grady-blog.web.app/',
+      linkeText: 'Visit Blog'
     },
     {
       name: 'No-code Canvas',
@@ -39,9 +37,9 @@ export class FeatureProjectsComponent {
         It aims to provide a user-friendly experience for designing workflows without coding.
       `,
       imageUrl: '/assets/images/no-code-canvas.png',
-      link: '/projects/node-code-canvas'
+      link: '',
+      linkeText: 'View Demo'
     },
-    // TODO: EDM Editor
     {
       name: 'Data Lineage',
       description: `
@@ -50,7 +48,19 @@ export class FeatureProjectsComponent {
         allowing users to explore data connections interactively.
       `,
       imageUrl: '/assets/images/data-lineage.png',
-      link: '/projects/data-lineage'
+      link: '',
+      linkeText: 'View Demo'
+    },
+    {
+      name: 'EDM Editor',
+      description: `
+        This project is an email template editor built with GrapesJS, 
+        allowing users to create and edit responsive email templates visually. 
+        It features a drag-and-drop interface, a rich text editor, and a library of components for building custom emails.
+      `,
+      imageUrl: '/assets/images/edm-editor.png',
+      link: '',
+      linkeText: 'View Demo'
     },
     // TODO: Embedded Tableau Report
     // TODO: SQL Flow
@@ -74,6 +84,13 @@ export class FeatureProjectsComponent {
           width: '1200px',
           minWidth: '1200px',
           height: '800px',
+        });
+        break;
+      case 'EDM Editor':
+        this.dialog.open(EdmEditorComponent, {
+          width: '1200px',
+          minWidth: '1200px',
+          height: '700px',
         });
         break;
     }

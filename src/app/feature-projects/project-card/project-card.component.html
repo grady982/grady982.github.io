@@ -1,13 +1,13 @@
 <div class="project-card">
-    <img [src]="imageUrl()" alt="Project 1" class="project-img">
+    <img [src]="project().imageUrl" alt="Project 1" class="project-img">
     <div class="project-content">
-        <h3 class="project-title">{{ name() }}</h3>
+        <h3 class="project-title">{{ project().name }}</h3>
         <p class="project-description">
-            {{ description() }}
+            {{ project().description }}
         </p>
         <div class="project-links">
             <a class="project-link" (click)="onClick()">
-                View Project
+                {{ project().linkeText }}
             </a>
         </div>
     </div>

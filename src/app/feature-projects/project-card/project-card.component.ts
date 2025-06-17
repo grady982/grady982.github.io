@@ -1,5 +1,13 @@
 import { Component, input, output } from '@angular/core';
 
+export interface Project {
+  name: string;
+  description: string;
+  imageUrl: string;
+  link: string;
+  linkeText: string;
+}
+
 @Component({
   selector: 'app-project-card',
   imports: [],
@@ -8,11 +16,7 @@ import { Component, input, output } from '@angular/core';
 })
 export class ProjectCardComponent {
 
-  name = input.required<string>();
-  description = input.required<string>();
-  imageUrl = input.required<string>();
-  link = input.required<string>();
-
+  project = input.required<Project>();
   onView = output<void>();
 
   onClick() {
