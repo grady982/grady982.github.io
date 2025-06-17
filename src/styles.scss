@@ -41,44 +41,6 @@ body {
     padding: 0 2rem;
 }
 
-header {
-    padding: 2rem 0;
-    position: sticky;
-    top: 0;
-    background-color: rgba(248, 250, 252, 0.95);
-    backdrop-filter: blur(5px);
-    z-index: 100;
-    border-bottom: 1px solid var(--border);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--primary);
-}
-
 .title {
     font-size: 3rem;
     margin-bottom: 1rem;
