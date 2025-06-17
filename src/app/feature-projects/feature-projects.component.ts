@@ -37,7 +37,6 @@ export class FeatureProjectsComponent {
         supporting drag-and-drop functionality, node creation, and connection management. 
         The project is built with Angular and uses Drawflow for the canvas interface. 
         It aims to provide a user-friendly experience for designing workflows without coding.
-        The project is still in development, with plans to add more features like node customization and data export.
       `,
       imageUrl: '/assets/images/no-code-canvas.png',
       link: '/projects/node-code-canvas'
