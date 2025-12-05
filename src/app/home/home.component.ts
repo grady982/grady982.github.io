@@ -1,22 +1,22 @@
-import { Component } from '@angular/core';
-import { AboutComponent } from '../about/about.component';
-import { AchievementsComponent } from '../achievements/achievements.component';
-import { ExperienceComponent } from '../experience/experience.component';
-import { TechStackComponent } from '../tech-stack/tech-stack.component';
-import { FeatureProjectsComponent } from '../feature-projects/feature-projects.component';
-import { ContactComponent } from '../contact/contact.component';
-import { FooterComponent } from '../footer/footer.component';
+import { Component } from "@angular/core";
+import { AboutComponent } from "../about/about.component";
+import { AchievementsComponent } from "../achievements/achievements.component";
+import { ExperienceComponent } from "../experience/experience.component";
+import { TechStackComponent } from "../tech-stack/tech-stack.component";
+import { FeatureProjectsComponent } from "../feature-projects/feature-projects.component";
+import { ContactComponent } from "../contact/contact.component";
 
 @Component({
-  selector: 'app-home',
+  selector: "app-home",
   imports: [
-    AboutComponent, AchievementsComponent, ExperienceComponent, 
-    TechStackComponent, FeatureProjectsComponent, ContactComponent,
-    FooterComponent
+    AboutComponent,
+    AchievementsComponent,
+    ExperienceComponent,
+    TechStackComponent,
+    FeatureProjectsComponent,
+    ContactComponent,
   ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  templateUrl: "./home.component.html",
+  styleUrl: "./home.component.scss",
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
