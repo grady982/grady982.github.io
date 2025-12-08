@@ -36,3 +36,15 @@ nav {
 .nav-links a:hover {
     color: var(--primary);
 }
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}

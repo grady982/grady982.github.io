@@ -9,6 +9,18 @@
         <a href="/home#projects">Projects</a>
         <a href="/home#contact">Contact</a>
       </div>
+      <div class="hamburger">
+        <button mat-icon-button aria-label="Menu" [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="onMenuItemClick('about')">About</button>
+          <button mat-menu-item (click)="onMenuItemClick('achievements')">Achievements</button>
+          <button mat-menu-item (click)="onMenuItemClick('experience')">Experience</button>
+          <button mat-menu-item (click)="onMenuItemClick('projects')">Projects</button>
+          <button mat-menu-item (click)="onMenuItemClick('contact')">Contact</button>
+        </mat-menu>
+      </div>
     </nav>
   </div>
 </header>
