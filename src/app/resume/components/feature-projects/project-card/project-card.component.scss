@@ -57,4 +57,16 @@
             }
         }
     }
+
+    @media (max-width: 428px) {
+        .previewImg {
+            height: 220px;
+        }
+
+        .content {
+            .description {
+                min-height: 170px;
+            }
+        }
+    }
 }

@@ -25,7 +25,6 @@
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
-    // text-align: right;
     padding-left: 3rem;
 }
 
@@ -60,4 +59,15 @@
     font-size: 0.875rem;
     color: var(--gray);
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 428px) {
+    .timeline::before {
+        content: "";
+        left: 0;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
 }

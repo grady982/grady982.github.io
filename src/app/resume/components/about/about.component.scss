@@ -49,10 +49,7 @@
         }
     }
 
-}
-
-@media (max-width: 768px) {
-    .hero {
+    @media (max-width: 768px) {
         margin-top: 25px;
         padding: 6rem 32px 4rem 32px;
 
@@ -78,5 +75,9 @@
         .right {
             order: 1;
         }
+    }
+
+    @media (max-width: 428px) {
+        padding: 6rem 0 3rem 0;
     }
 }
