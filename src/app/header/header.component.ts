@@ -11,6 +11,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   onMenuItemClick(item: string): void {
-    window.location.href = `/home#${item}`;
+    window.location.href = `/resume#${item}`;
   }
 }

@@ -92,54 +92,9 @@ section {
 }
 
 @media (max-width: 768px) {
-    // .hero {
-    //     flex-direction: column-reverse;
-    //     text-align: center;
-    //     padding: 3rem 0;
-    // }
-
-    .timeline::before {
-        left: 0;
+    section {
+        padding: 4.5rem 0;
     }
-
-    .timeline-item {
-        justify-content: flex-start;
-        flex-direction: column;
-    }
-
-    .timeline-item:nth-child(odd) {
-        justify-content: flex-start;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-content {
-        text-align: left;
-        padding-right: 0;
-        padding-left: 2rem;
-    }
-
-    .timeline-item:nth-child(even) .timeline-content {
-        padding-left: 2rem;
-    }
-
-    .timeline-content {
-        width: 100%;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-dot {
-        right: auto;
-        left: -10px;
-    }
-}
-
-/* You can add global styles to this file, and also import other style files */
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 @import 'drawflow/dist/drawflow.min.css';
