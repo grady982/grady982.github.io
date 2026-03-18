@@ -1,32 +1,43 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-tech-stack',
+  selector: "app-tech-stack",
   imports: [],
-  templateUrl: './tech-stack.component.html',
-  styleUrl: './tech-stack.component.scss'
+  templateUrl: "./tech-stack.component.html",
+  styleUrl: "./tech-stack.component.scss",
 })
 export class TechStackComponent {
   stackList: string[] = [
-    'Angular',
-    'React',
-    'Scss',
-    'Jasmine',
-    'karma',
-    'Selenium',
-    'Redux',
-    'NgRx',
-    'TypeScript',
-    'JavaScript',
-    'NodeJs',
-    'Express.js',
-    'Koa.js',
-    'pm2',
-    'Java',
-    'Spring Boot',
-    'MSSQL',
-    'PostgreSQL',
-    'Docker',
-    'Kubernetes',
+    "Angular",
+    "React",
+    "Next.js",
+    "Redux",
+    "NgRx",
+    "HTML",
+    "CSS",
+    "SCSS",
+    "TypeScript",
+    "JavaScript",
+
+    "Jest",
+    "React Testing Library",
+    "Storybook",
+    "Selenium",
+
+    "Vite",
+    "Webpack",
+    "Git",
+    "CI/CD pipelines",
+
+    "Node.js",
+    "Express.js",
+    "Koa.js",
+    "Java",
+    "Spring Boot",
+    "pm2",
+    "MSSQL",
+    "PostgreSQL",
+    "Docker",
+    "Kubernetes",
   ];
 }

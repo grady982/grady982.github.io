@@ -7,7 +7,7 @@ import { FeatureProjectsComponent } from "./components/feature-projects/feature-
 import { ContactComponent } from "./components/contact/contact.component";
 
 @Component({
-  selector: "app-home",
+  selector: "app-resume",
   imports: [
     AboutComponent,
     AchievementsComponent,
@@ -19,4 +19,4 @@ import { ContactComponent } from "./components/contact/contact.component";
   templateUrl: "./resume.component.html",
   styleUrl: "./resume.component.scss",
 })
-export class ResumeComponent { }
+export class ResumeComponent {}

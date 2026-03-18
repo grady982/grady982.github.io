@@ -20,6 +20,27 @@ export class FeatureProjectsComponent {
 
   projects: Project[] = [
     {
+      name: "Ng SQL Flow",
+      description: `
+        Angular component library for visualizing SQL data flow, built with Cytoscape.js.
+        It provides an interactive graph interface to display SQL queries and their relationships, 
+        allowing users to explore data flow and dependencies in a visually intuitive way.
+      `,
+      imageUrl: "/assets/images/ng-sql-flow.png",
+      link: "https://ng-sql-flow-storybook.web.app/?path=/story/components-sqlflow--normal-sql",
+      linkText: "View Demo",
+    },
+    {
+      name: "Laughter Official Website",
+      description: `
+        Laughter is a professional comedy and entertainment production company based in Taiwan.
+        I developed the official website using React and React MUI, implementing a responsive design to ensure optimal viewing across devices.
+      `,
+      imageUrl: "/assets/images/laughter.png",
+      link: "https://laughterent.fun/",
+      linkText: "Visit Website",
+    },
+    {
       name: "Convert to Webp",
       description: `
         A simple web application that allows users to convert images to the WebP format. 
@@ -82,6 +103,9 @@ export class FeatureProjectsComponent {
 
   onViewProject(e: Project) {
     switch (e.name) {
+      case "Laughter Official Website":
+        window.open(e.link, "_blank");
+        break;
       case "Convert to Webp":
         window.open(e.link, "_blank");
         break;

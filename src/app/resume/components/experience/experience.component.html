@@ -6,16 +6,18 @@
         <div class="timeline-item">
           <div class="timeline-content">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">{{ exp.startDate }} - {{ exp.endDate }}</div>
+            <div class="timeline-date">
+              {{ exp.startDate }} - {{ exp.endDate }}
+            </div>
             <h3>{{ exp.position }}</h3>
             <p>{{ exp.company }}</p>
             <ul>
               @for (item of exp.itemList; track item) {
-                <li>{{ item }}</li>
+                <li [innerHTML]="item"></li>
               }
             </ul>
           </div>
-        </div>  
+        </div>
       }
     </div>
   </div>
