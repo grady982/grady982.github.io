@@ -6,6 +6,7 @@ export interface Project {
   imageUrl: string;
   link: string;
   linkText: string;
+  openInNewTab?: boolean;
 }
 
 @Component({

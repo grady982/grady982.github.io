@@ -28,7 +28,8 @@ export class FeatureProjectsComponent {
       `,
       imageUrl: "/assets/images/ng-sql-flow.png",
       link: "https://ng-sql-flow-storybook.web.app/?path=/story/components-sqlflow--normal-sql",
-      linkText: "View Demo",
+      linkText: "Visit Website",
+      openInNewTab: true,
     },
     {
       name: "Laughter Official Website",
@@ -39,6 +40,7 @@ export class FeatureProjectsComponent {
       imageUrl: "/assets/images/laughter.png",
       link: "https://laughterent.fun/",
       linkText: "Visit Website",
+      openInNewTab: true,
     },
     {
       name: "Convert to Webp",
@@ -48,18 +50,8 @@ export class FeatureProjectsComponent {
       `,
       imageUrl: "/assets/images/convert-to-webp.png",
       link: "https://convert2webp.app/",
-      linkText: "View Website",
-    },
-    {
-      name: "Blog",
-      description: `
-        This blog began in January 2024 as a space to share my learning journey and experiences in web development. 
-        It's built with Angular and Angular Material, featuring a responsive design, Firebase Authentication, and a rich text editor for creating posts. 
-        Without a traditional backend, it uses Firebase Realtime Database to store content and is fully hosted on Firebase.
-      `,
-      imageUrl: "/assets/images/blog.png",
-      link: "https://grady-blog.web.app/",
-      linkText: "Visit Blog",
+      linkText: "Visit Website",
+      openInNewTab: true,
     },
     {
       name: "No-code Canvas",
@@ -70,6 +62,17 @@ export class FeatureProjectsComponent {
         It aims to provide a user-friendly experience for designing workflows without coding.
       `,
       imageUrl: "/assets/images/no-code-canvas.png",
+      link: "",
+      linkText: "View Demo",
+    },
+    {
+      name: "EDM Editor",
+      description: `
+        This project is an email template editor built with GrapesJS, 
+        allowing users to create and edit responsive email templates visually. 
+        It features a drag-and-drop interface, a rich text editor, and a library of components for building custom emails.
+      `,
+      imageUrl: "/assets/images/edm-editor.png",
       link: "",
       linkText: "View Demo",
     },
@@ -85,33 +88,28 @@ export class FeatureProjectsComponent {
       linkText: "View Demo",
     },
     {
-      name: "EDM Editor",
+      name: "Blog",
       description: `
-        This project is an email template editor built with GrapesJS, 
-        allowing users to create and edit responsive email templates visually. 
-        It features a drag-and-drop interface, a rich text editor, and a library of components for building custom emails.
+        This blog began in January 2024 as a space to share my learning journey and experiences in web development. 
+        It's built with Angular and Angular Material, featuring a responsive design, Firebase Authentication, and a rich text editor for creating posts. 
+        Without a traditional backend, it uses Firebase Realtime Database to store content and is fully hosted on Firebase.
       `,
-      imageUrl: "/assets/images/edm-editor.png",
-      link: "",
-      linkText: "View Demo",
+      imageUrl: "/assets/images/blog.png",
+      link: "https://grady-blog.web.app/",
+      linkText: "Visit Website",
+      openInNewTab: true,
     },
-    // TODO: Embedded Tableau Report
-    // TODO: SQL Flow
   ];
 
   dialog = inject(MatDialog);
 
   onViewProject(e: Project) {
+    if (e.openInNewTab) {
+      window.open(e.link, "_blank");
+      return;
+    }
+
     switch (e.name) {
-      case "Laughter Official Website":
-        window.open(e.link, "_blank");
-        break;
-      case "Convert to Webp":
-        window.open(e.link, "_blank");
-        break;
-      case "Blog":
-        window.open(e.link, "_blank");
-        break;
       case "Data Lineage":
         this.dialog.open(DataLineageComponent, {
           width: "1200px",
